@@ -22,9 +22,9 @@ jobs:
     name: job two
     runs-on: windows-latest
     steps:
-      -name: step one
-       uses: actions/checkout@v2
+      - name: step one
+        uses: actions/checkout@v2
 
-      -name: step two
-       run: "Get-ChildItem Env: | Sort-Object Name"
+      - name: step two
+        run: "Get-ChildItem Env: | Sort-Object Name"
 
