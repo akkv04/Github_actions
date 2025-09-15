@@ -28,3 +28,15 @@ jobs:
       - name: step two
         run: "Get-ChildItem Env: | Sort-Object Name"
 
+
+
+  job3:
+    name: job three
+    needs: [ job1, job2 ]
+    runs-om: ubuntu-latest
+    steps:
+      - name: step one
+        uses: actions/checkout@v2
+        
+      - name: step two
+        runs: echo "this is a dependency job"
