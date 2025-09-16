@@ -1,0 +1,14 @@
+name: python_syntax
+
+on: [push]
+
+jobs:
+   build:
+      name: build
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: checkout
+          uses: actions/checkout@v2
+
+      
