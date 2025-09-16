@@ -1,0 +1,48 @@
+name: Chapterone problem
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    job1
+        name: Job one
+        runs-on: ubuntu-latest
+        steps:
+            - name: step one
+              uses: actions/checkout@v2
+            
+            - name: step two
+              run:  echo $date
+    
+    job2:
+        name: job two
+        runs-on: windows-latest
+        steps:
+            - name: step one
+              uses: actions/checkout@v2
+              
+            - name: step two
+              run: date
+    
+    job3:
+        name: job three
+        runs-on: macos-latest
+        steps:
+            - name: step one
+              uses: actions/checkout@v2
+              
+            - name: step two
+              run: date
+    
+    job4:
+        name: job four
+        needs: [ job1, job2, job3 ]
+        runs-on: ubuntu-latest
+        steps:
+            - name: step one
+              uses: actions/checkout@v2
+              
+            - name: step two
+              run: echo "hip hip"
