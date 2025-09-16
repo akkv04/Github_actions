@@ -4,4 +4,5 @@ def greet(name
 for i in range(5) # Missing colon
     print("Iteration:", i)
 
-num = input("Enter a number: ") + 5  # Mixing input (string) and integer without conversion
+num = input("Enter an number: ") + 5  # Mixing input (string) and integer without conversion
+          
