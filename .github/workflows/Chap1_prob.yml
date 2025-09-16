@@ -7,9 +7,9 @@ on:
 
 jobs:
     job1
-        name: Job one
-        runs-on: ubuntu-latest
-        steps:
+      name: Job one
+      runs-on: ubuntu-latest
+      steps:
             - name: step one
               uses: actions/checkout@v2
             
