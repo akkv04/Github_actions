@@ -6,5 +6,5 @@ for i in range(5) # Missing colon
 
 num = input("Enter a number: ") + 5  # Mixing input (string) and integer without conversion
 
-list_values = [1, 2, 3, 4, 5
-print(list_values[5])  # Missing closing bracket + IndexError (list index out of range)
+list_values = [1, 2, 3, 4, 5 ]
+print(list_values[1])  # Missing closing bracket + IndexError (list index out of range)
