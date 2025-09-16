@@ -3,7 +3,7 @@ name: Chapterone problem
 on:
     push:
         branches:
-            - main
+            - master
 
 jobs:
     job1:
