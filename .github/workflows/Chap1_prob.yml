@@ -6,8 +6,8 @@ on:
             - main
 
 jobs:
-    job1
-      name: Job one
+    job1:
+      name: Jobone
       runs-on: ubuntu-latest
       steps:
             - name: step one
