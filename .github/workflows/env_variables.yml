@@ -1,0 +1,35 @@
+name: Environment Variables
+
+env:
+  WORKSPACE_ENV_VAR: "Custom workspace environment variable"
+
+on: 
+ push:
+   branches: 
+     - main
+
+jobs:
+  ubuntu:
+    env:
+      Job_env_var: "Custom Var for Ubutnu"
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Print Custom Var for Ubunut'
+        env:
+          step_env_var: Custom var for step
+        steps:
+          run: |
+            echo "Accessing environment variables in run command"
+            echo "$WORKSPACE_ENVIRONMENT_VARIABLE"
+            echo "$JOB_ENVIRONMENT_VARIABLE"
+            echo "$STEP_ENVIRONMENT_VARIABLE"
+            echo "------------------------------------------------------"
+            echo "Accessing environment variables using env context"
+            echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
+            echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
+            echo "${{ env.STEP_ENVIRONMENT_VARIABLE }} Not defined"
+
+
+
+
+
