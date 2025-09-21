@@ -17,7 +17,6 @@ jobs:
       - name: 'Print Custom Var for Ubunut'
         env:
           step_env_var: Custom var for step
-        steps:
           run: |
             echo "Accessing environment variables in run command"
             echo "$WORKSPACE_ENVIRONMENT_VARIABLE"
